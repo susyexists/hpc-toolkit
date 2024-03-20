@@ -836,11 +836,3 @@ c.ServerApp.token = ''
 #  Should be in the form of an HTTP origin: ws[s]://hostname[:port]
 #  Default: ''
 # c.ServerApp.websocket_url = ''
-
-
-# if os.environ.get('NOTEBOOK_PASSWORD', 'none') != 'none':
-#     c.NotebookApp.password = os.environ['NOTEBOOK_PASSWORD']
-#     del os.environ['NOTEBOOK_PASSWORD']
-
-# if CORS_ORIGIN:
-#     c.NotebookApp.allow_origin = CORS_ORIGIN
