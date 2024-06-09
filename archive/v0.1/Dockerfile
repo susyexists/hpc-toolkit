@@ -3,14 +3,15 @@ FROM ubuntu:22.04
 #Expose port
 EXPOSE 8888
 
-COPY ./scripts /
+#Copy jupyter lab configurations 
+COPY jupyter_lab_config.py /root/.jupyter/
 #Copy installation script
-# COPY ./scripts/installs.sh /
+COPY installs.sh /
 #Run installments
-RUN  sh installs.sh > installs.out
+RUN  sh installs.sh
 #Copy initialization script
-# COPY ./scripts/startup.sh .
+COPY startup.sh .
 #Chose container work directory
-WORKDIR /work/
+WORKDIR /espresso-machine/
 #Run command
 CMD ["sh","/startup.sh"]
